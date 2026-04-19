@@ -81,7 +81,7 @@ export default function Menu() {
     <section
       id="menu"
       ref={ref}
-      className="py-24 bg-pink-50/50 dark:bg-dark-800/50 relative overflow-hidden"
+      className="py-24 bg-pink-50 dark:bg-dark-900 relative overflow-hidden"
       aria-label="Our menu"
     >
       <div className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-pink-200/15 dark:bg-pink-800/10 blur-3xl" />
@@ -100,7 +100,7 @@ export default function Menu() {
           <h2 className="font-heading text-4xl sm:text-5xl font-bold text-pink-900 dark:text-pink-100 mb-4">
             Taste the <span className="text-gradient-pink">Magic</span>
           </h2>
-          <p className="text-pink-800/60 dark:text-pink-200/60 max-w-xl mx-auto">
+          <p className="text-pink-800/80 dark:text-pink-200/80 max-w-xl mx-auto">
             From delicate cupcakes to grand celebration cakes, every item is a
             labor of love crafted to perfection.
           </p>
@@ -155,14 +155,14 @@ export default function Menu() {
               </div>
               <div className="p-5">
                 <div className="flex items-start justify-between gap-2 mb-2">
-                  <h3 className="font-heading text-lg font-bold text-pink-900 dark:text-pink-100 leading-tight">
+                  <h3 className="font-heading text-lg font-bold text-pink-900 dark:text-white leading-tight">
                     {item.name}
                   </h3>
-                  <span className="font-heading text-lg font-bold text-pink-500 dark:text-pink-400 whitespace-nowrap">
+                  <span className="font-heading text-lg font-bold text-pink-600 dark:text-pink-300 whitespace-nowrap">
                     {item.price}
                   </span>
                 </div>
-                <p className="text-sm text-pink-800/60 dark:text-pink-200/60 leading-relaxed">
+                <p className="text-sm text-pink-800/80 dark:text-pink-200/80 leading-relaxed">
                   {item.description}
                 </p>
               </div>

@@ -63,13 +63,13 @@ export default function About() {
             <br />
             <span className="text-gradient-pink">Served with Joy</span>
           </h2>
-          <p className="text-pink-800/70 dark:text-pink-200/70 leading-relaxed mb-6 text-base">
+          <p className="text-pink-800/90 dark:text-pink-200/90 leading-relaxed mb-6 text-base">
             Sweet Sprinkles started in 2018 as a tiny home kitchen with a big
             dream — to bring people together through the magic of freshly baked
             treats. What began with a stand mixer and a passion for buttercream
             has blossomed into the neighborhood's favorite bakery and cafe.
           </p>
-          <p className="text-pink-800/70 dark:text-pink-200/70 leading-relaxed mb-8 text-base">
+          <p className="text-pink-800/90 dark:text-pink-200/90 leading-relaxed mb-8 text-base">
             Every croissant is layered by hand, every cupcake frosted with care,
             and every cake designed to make your celebration unforgettable. We
             source local, organic ingredients because we believe the best flavors
@@ -94,10 +94,10 @@ export default function About() {
                 <span className="text-2xl block mb-2 group-hover:scale-110 transition-transform inline-block">
                   {item.icon}
                 </span>
-                <p className="font-bold text-sm text-pink-800 dark:text-pink-200">
+                <p className="font-bold text-sm text-pink-800 dark:text-white">
                   {item.title}
                 </p>
-                <p className="text-xs text-pink-600/60 dark:text-pink-300/60 mt-0.5">
+                <p className="text-xs text-pink-600/80 dark:text-pink-300/80 mt-0.5">
                   {item.desc}
                 </p>
               </motion.div>

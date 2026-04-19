@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ── Design Tokens ── */
 @theme {
   --color-pink-50: #fef1f6;
@@ -20,6 +22,7 @@
   --color-gold-400: #fbbf24;
   --color-gold-500: #f59e0b;
 
+  --color-dark-700: #3d1a30;
   --color-dark-800: #2d1320;
   --color-dark-900: #1a0a14;
 
@@ -79,15 +82,15 @@
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(249, 168, 201, 0.3);
   }
 
   .dark .glass-card {
-    background: rgba(45, 19, 32, 0.7);
+    background: rgba(61, 26, 48, 0.75);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(249, 168, 201, 0.15);
+    border: 1px solid rgba(249, 168, 201, 0.2);
   }
 
   .sprinkle-dot {

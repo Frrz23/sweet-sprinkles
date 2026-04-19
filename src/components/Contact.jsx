@@ -33,7 +33,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-24 bg-pink-50/50 dark:bg-dark-800/50 relative overflow-hidden"
+      className="py-24 bg-pink-50 dark:bg-dark-900 relative overflow-hidden"
       aria-label="Contact us"
     >
       <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-pink-200/15 dark:bg-pink-800/10 blur-3xl" />
@@ -54,7 +54,7 @@ export default function Contact() {
             <br />
             <span className="text-gradient-pink">Sweet Together</span>
           </h2>
-          <p className="text-pink-800/60 dark:text-pink-200/60 max-w-xl mx-auto">
+          <p className="text-pink-800/80 dark:text-pink-200/80 max-w-xl mx-auto">
             Planning a celebration? Craving something special? Drop us a line
             and we&rsquo;ll make your sweetest dreams come true.
           </p>
@@ -78,7 +78,7 @@ export default function Contact() {
                     type="text"
                     id="name"
                     placeholder="Jane Doe"
-                    className="w-full px-4 py-3 rounded-xl bg-white/60 dark:bg-dark-900/60 border border-pink-200 dark:border-pink-800 text-pink-900 dark:text-pink-100 placeholder-pink-400/50 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-dark-800/80 border border-pink-200 dark:border-pink-700 text-pink-900 dark:text-pink-100 placeholder-pink-400/70 dark:placeholder-pink-300/50 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
                   />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function Contact() {
                     type="email"
                     id="email"
                     placeholder="jane@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white/60 dark:bg-dark-900/60 border border-pink-200 dark:border-pink-800 text-pink-900 dark:text-pink-100 placeholder-pink-400/50 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-dark-800/80 border border-pink-200 dark:border-pink-700 text-pink-900 dark:text-pink-100 placeholder-pink-400/70 dark:placeholder-pink-300/50 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default function Contact() {
                 </label>
                 <select
                   id="subject"
-                  className="w-full px-4 py-3 rounded-xl bg-white/60 dark:bg-dark-900/60 border border-pink-200 dark:border-pink-800 text-pink-900 dark:text-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-dark-800/80 border border-pink-200 dark:border-pink-700 text-pink-900 dark:text-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
                 >
                   <option value="">Choose a topic...</option>
                   <option value="custom-cake">Custom Cake Order</option>
@@ -119,7 +119,7 @@ export default function Contact() {
                   id="message"
                   rows={5}
                   placeholder="Tell us about your dream cake, event date, or ask anything..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/60 dark:bg-dark-900/60 border border-pink-200 dark:border-pink-800 text-pink-900 dark:text-pink-100 placeholder-pink-400/50 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-dark-800/80 border border-pink-200 dark:border-pink-700 text-pink-900 dark:text-pink-100 placeholder-pink-400/70 dark:placeholder-pink-300/50 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all resize-none"
                 />
               </div>
 
@@ -157,7 +157,7 @@ export default function Contact() {
                     {info.title}
                   </p>
                   {info.lines.map((line, j) => (
-                    <p key={j} className="text-sm text-pink-800/60 dark:text-pink-200/60">
+                    <p key={j} className="text-sm text-pink-800/80 dark:text-pink-200/80">
                       {line}
                     </p>
                   ))}

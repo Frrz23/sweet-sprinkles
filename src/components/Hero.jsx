@@ -63,7 +63,7 @@ export default function Hero() {
             Celebration
           </h1>
 
-          <p className="text-lg text-pink-800/70 dark:text-pink-200/70 max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed font-body">
+          <p className="text-lg text-pink-800/85 dark:text-pink-200/85 max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed font-body">
             Discover handcrafted cupcakes, artisan cakes, and warm pastries made
             with love, premium ingredients, and just the right amount of
             sprinkles. Your sweetest moments start here.
