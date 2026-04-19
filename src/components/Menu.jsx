@@ -5,43 +5,43 @@ const categories = ["All", "Cupcakes", "Cakes", "Pastries", "Cafe"];
 
 const menuItems = [
   {
-    name: "Rose Velvet Cupcake",
-    description: "Moist red velvet with rose-infused cream cheese frosting and edible petals",
+    name: "Fresh Baked Muffins",
+    description: "Soft, warm muffins baked fresh every morning with seasonal berries and a hint of vanilla",
     price: "$4.50",
     category: "Cupcakes",
-    image: "/images/cupcakes.png",
+    image: `${import.meta.env.BASE_URL}images/Muffins.jpeg`,
     badge: "Bestseller",
   },
   {
-    name: "Lavender Honey Cake",
-    description: "Three layers of lavender sponge with wild honey buttercream and fresh berries",
-    price: "$48.00",
+    name: "Rich Chocolate Cake",
+    description: "Decadent dark chocolate layers separated by smooth fudge ganache and topped with chocolate curls",
+    price: "$45.00",
     category: "Cakes",
-    image: "/images/cake.png",
+    image: `${import.meta.env.BASE_URL}images/ChoclateCake.jpeg`,
     badge: "Popular",
   },
   {
-    name: "Almond Croissant",
-    description: "Flaky, buttery layers filled with almond frangipane, dusted with powdered sugar",
-    price: "$5.25",
+    name: "Chocolate Truffle",
+    description: "Rich, melt-in-your-mouth artisan truffles dusted in premium cocoa powder",
+    price: "$3.50",
     category: "Pastries",
-    image: "/images/pastries.png",
+    image: `${import.meta.env.BASE_URL}images/ChoclateTruffle.jpeg`,
     badge: null,
   },
   {
-    name: "Strawberry Dream Cupcake",
-    description: "Fresh strawberry cake with strawberry Swiss meringue buttercream and freeze-dried strawberry dust",
-    price: "$4.75",
-    category: "Cupcakes",
-    image: "/images/cupcakes.png",
+    name: "Classic Cheesecake",
+    description: "Creamy, smooth New York style cheesecake with a buttery graham cracker crust",
+    price: "$6.00",
+    category: "Cakes",
+    image: `${import.meta.env.BASE_URL}images/CheeseCake.jpeg`,
     badge: "New",
   },
   {
-    name: "Celebration Tier Cake",
-    description: "Custom three-tier showstopper with fondant details, available in 20+ flavors",
-    price: "From $120",
+    name: "Custom Wedding Cakes",
+    description: "Elegant, multi-tier wedding cakes customized perfectly for your special day",
+    price: "From $250",
     category: "Cakes",
-    image: "/images/cake.png",
+    image: `${import.meta.env.BASE_URL}images/WeddingCakes.jpeg`,
     badge: null,
   },
   {
@@ -49,7 +49,7 @@ const menuItems = [
     description: "Ceremonial-grade matcha whisked with steamed oat milk, subtly sweet",
     price: "$5.50",
     category: "Cafe",
-    image: "/images/pastries.png",
+    image: `${import.meta.env.BASE_URL}images/pastries.png`,
     badge: "Favorite",
   },
   {
@@ -57,7 +57,7 @@ const menuItems = [
     description: "Classic French pastry with rich dark chocolate batons and flaky, golden crust",
     price: "$4.00",
     category: "Pastries",
-    image: "/images/pastries.png",
+    image: `${import.meta.env.BASE_URL}images/pastries.png`,
     badge: null,
   },
   {
@@ -65,7 +65,7 @@ const menuItems = [
     description: "House-made vanilla bean syrup with locally roasted espresso and silky steamed milk",
     price: "$5.00",
     category: "Cafe",
-    image: "/images/pastries.png",
+    image: `${import.meta.env.BASE_URL}images/pastries.png`,
     badge: null,
   },
 ];
@@ -144,7 +144,7 @@ export default function Menu() {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className={`w-full h-full group-hover:scale-110 transition-transform duration-500 ${item.name.includes("Wedding") ? "object-contain bg-pink-50/50 dark:bg-dark-900/50" : "object-cover"}`}
                 />
                 {item.badge && (
                   <span className="absolute top-3 right-3 px-3 py-1 rounded-full bg-pink-500 text-white text-xs font-bold shadow-md">

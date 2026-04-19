@@ -1,9 +1,8 @@
 import { IoLogoInstagram, IoLogoFacebook, IoLogoPinterest, IoHeartSharp } from "react-icons/io5";
 
 const socialLinks = [
-  { icon: <IoLogoInstagram />, label: "Instagram", href: "#" },
-  { icon: <IoLogoFacebook />, label: "Facebook", href: "#" },
-  { icon: <IoLogoPinterest />, label: "Pinterest", href: "#" },
+  { icon: <IoLogoInstagram />, label: "Instagram", href: "https://www.instagram.com/sweet_sprinkles2023/" },
+  { icon: <IoLogoFacebook />, label: "Facebook", href: "https://www.facebook.com/p/Sweet-Sprinkles-100088856784279/" },
 ];
 
 const footerLinks = [
@@ -44,7 +43,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <a href="#home" className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🧁</span>
+              <img src={`${import.meta.env.BASE_URL}images/Logo.png`} alt="Logo" className="h-8 w-auto object-contain" />
               <span className="font-heading text-xl font-bold text-white">Sweet Sprinkles</span>
             </a>
             <p className="text-sm leading-relaxed mb-6 max-w-xs text-pink-200/60">

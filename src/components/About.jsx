@@ -26,13 +26,13 @@ export default function About() {
         >
           <div className="relative">
             <img
-              src="/images/about.png"
+              src={`${import.meta.env.BASE_URL}images/about.png`}
               alt="Baker lovingly preparing cupcakes in our kitchen"
               className="rounded-3xl shadow-xl w-full object-cover aspect-square"
             />
             <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-lg border-4 border-cream-50 dark:border-dark-900 hidden sm:block">
               <img
-                src="/images/cupcakes.png"
+                src={`${import.meta.env.BASE_URL}images/cupcakes.png`}
                 alt="Close-up of our signature cupcakes"
                 className="w-full h-full object-cover"
               />
