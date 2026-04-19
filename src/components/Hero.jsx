@@ -123,7 +123,7 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-pink-400/30 to-pink-600/20 blur-2xl scale-110" />
             <img
-              src={`${import.meta.env.BASE_URL}images/hero.png`}
+              src={`${import.meta.env.BASE_URL}images/BakeryItemsOnDisplay.jpg`}
               alt="Beautiful bakery interior with cupcakes and pastries on display"
               className="relative rounded-3xl shadow-2xl shadow-pink-300/30 dark:shadow-pink-900/30 w-full max-w-lg object-cover aspect-[4/5]"
             />

@@ -123,14 +123,16 @@ export default function Contact() {
                 />
               </div>
 
-              <motion.button
+              <motion.a
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                type="submit"
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 text-white font-bold text-base shadow-lg shadow-pink-400/30 hover:shadow-xl hover:shadow-pink-500/40 transition-shadow"
+                href="https://ig.me/m/sweet_sprinkles2023"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block text-center py-3.5 rounded-xl bg-gradient-to-r from-pink-500 to-pink-600 text-white font-bold text-base shadow-lg shadow-pink-400/30 hover:shadow-xl hover:shadow-pink-500/40 transition-shadow"
               >
                 Send Sweet Message 💌
-              </motion.button>
+              </motion.a>
             </form>
           </motion.div>
 

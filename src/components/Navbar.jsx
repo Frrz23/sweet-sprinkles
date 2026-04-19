@@ -31,7 +31,11 @@ export default function Navbar({ dark, setDark }) {
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between" aria-label="Main navigation">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group">
-          <img src={`${import.meta.env.BASE_URL}images/Logo.png`} alt="Logo" className="h-8 w-auto object-contain" />
+          <img 
+            src={`${import.meta.env.BASE_URL}images/Logo.png`} 
+            alt="Logo" 
+            className="h-10 w-auto object-contain drop-shadow-sm" 
+          />
           <span className="font-heading text-xl font-bold text-pink-700 dark:text-pink-300 group-hover:text-pink-500 transition-colors">
             Sweet Sprinkles
           </span>

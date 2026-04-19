@@ -49,7 +49,7 @@ const menuItems = [
     description: "Ceremonial-grade matcha whisked with steamed oat milk, subtly sweet",
     price: "$5.50",
     category: "Cafe",
-    image: `${import.meta.env.BASE_URL}images/pastries.png`,
+    image: `${import.meta.env.BASE_URL}images/SittingArea.jpg`,
     badge: "Favorite",
   },
   {
@@ -57,7 +57,7 @@ const menuItems = [
     description: "Classic French pastry with rich dark chocolate batons and flaky, golden crust",
     price: "$4.00",
     category: "Pastries",
-    image: `${import.meta.env.BASE_URL}images/pastries.png`,
+    image: `${import.meta.env.BASE_URL}images/FreshlyBakedOnesOnDisplay.jpg`,
     badge: null,
   },
   {
@@ -65,7 +65,7 @@ const menuItems = [
     description: "House-made vanilla bean syrup with locally roasted espresso and silky steamed milk",
     price: "$5.00",
     category: "Cafe",
-    image: `${import.meta.env.BASE_URL}images/pastries.png`,
+    image: `${import.meta.env.BASE_URL}images/CustomerFood.jpg`,
     badge: null,
   },
 ];
