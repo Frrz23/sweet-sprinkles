@@ -24,31 +24,22 @@ const footerLinks = [
       { label: "Cafe Drinks", href: "#menu" },
     ],
   },
-  {
-    title: "Support",
-    links: [
-      { label: "FAQs", href: "#" },
-      { label: "Catering", href: "#contact" },
-      { label: "Gift Cards", href: "#" },
-      { label: "Careers", href: "#" },
-    ],
-  },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-cream-50 dark:bg-dark-950 text-pink-800/80 dark:text-pink-200/80 pt-24 pb-8 border-t border-pink-100/50 dark:border-dark-800 relative overflow-hidden" aria-label="Footer">
+    <footer className="bg-cream-50 dark:bg-dark-900 text-pink-800/80 dark:text-pink-200/80 pt-24 pb-8 border-t border-pink-100/50 dark:border-dark-800 relative overflow-hidden" aria-label="Footer">
       
       {/* Subtle background blobs for depth */}
       <div className="absolute -left-40 bottom-0 w-96 h-96 rounded-full bg-pink-100/40 dark:bg-pink-900/10 blur-3xl" />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-pink-50/60 dark:bg-pink-900/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center sm:text-left">
           {/* Brand column */}
-          <div className="lg:col-span-2">
-            <a href="#home" className="inline-block mb-8 group pl-2">
-              <div className="flex flex-col items-start gap-5">
+          <div className="lg:col-span-2 flex flex-col items-center sm:items-start">
+            <a href="#home" className="inline-block mb-8 group">
+              <div className="flex flex-col items-center sm:items-start gap-5">
                 <div className="relative group-hover:-translate-y-1.5 transition-transform duration-300">
                   {/* Organic glowing blob behind the logo */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/60 dark:bg-pink-900/20 blur-xl rounded-full" />
@@ -58,16 +49,16 @@ export default function Footer() {
                     className="relative h-24 w-auto object-contain drop-shadow-md" 
                   />
                 </div>
-                <span className="font-heading text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-400 dark:to-pink-200 tracking-wide">
+                <span className="font-heading text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-400 dark:to-pink-200 tracking-wide text-center sm:text-left">
                   Sweet Sprinkles
                 </span>
               </div>
             </a>
-            <p className="text-sm leading-relaxed mb-8 max-w-xs text-pink-700/80 dark:text-pink-300/80 font-medium pl-2">
+            <p className="text-sm leading-relaxed mb-8 max-w-xs text-center sm:text-left text-pink-700/80 dark:text-pink-300/80 font-medium">
               Handcrafted happiness in every bite. Your neighborhood bakery for the freshest
               pastries, artisan cakes, and the warmest smiles in town.
             </p>
-            <div className="flex gap-4 pl-2">
+            <div className="flex justify-center sm:justify-start gap-4">
               {socialLinks.map((social, i) => (
                 <a
                   key={i}
@@ -83,18 +74,18 @@ export default function Footer() {
 
           {/* Link columns */}
           {footerLinks.map((group, i) => (
-            <div key={i} className="lg:pt-6">
-              <h3 className="font-heading text-lg font-bold text-pink-900 dark:text-white mb-6">
+            <div key={i} className="lg:pt-6 flex flex-col items-center sm:items-start">
+              <h3 className="font-heading text-lg font-bold text-pink-900 dark:text-white mb-6 text-center sm:text-left">
                 {group.title}
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4 flex flex-col items-center sm:items-start">
                 {group.links.map((link, j) => (
                   <li key={j}>
                     <a
                       href={link.href}
                       className="text-sm font-semibold text-pink-700/70 dark:text-pink-300/70 hover:text-pink-500 dark:hover:text-pink-400 transition-colors flex items-center gap-2 group/link"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400 opacity-0 group-hover/link:opacity-100 transition-opacity hidden sm:block" />
                       {link.label}
                     </a>
                   </li>
