@@ -64,7 +64,7 @@ export default function About() {
             <span className="text-gradient-pink">Served with Joy</span>
           </h2>
           <p className="text-pink-800/90 dark:text-pink-200/90 leading-relaxed mb-6 text-base">
-            Sweet Sprinkles started in 2018 as a tiny home kitchen with a big
+            Sweet Cafe started in 2018 as a tiny home kitchen with a big
             dream — to bring people together through the magic of freshly baked
             treats. What began with a stand mixer and a passion for buttercream
             has blossomed into the neighborhood's favorite bakery and cafe.

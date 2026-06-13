@@ -44,13 +44,13 @@ export default function Footer() {
                   {/* Organic glowing blob behind the logo */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/60 dark:bg-pink-900/20 blur-xl rounded-full" />
                   <img 
-                    src={`${import.meta.env.BASE_URL}images/Logo.png`} 
+                    src={`${import.meta.env.BASE_URL}images/logo2.png`} 
                     alt="Logo" 
-                    className="relative h-24 w-auto object-contain drop-shadow-md" 
+                    className="relative h-28 w-auto object-contain drop-shadow-md" 
                   />
                 </div>
-                <span className="font-heading text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-400 dark:to-pink-200 tracking-wide text-center sm:text-left">
-                  Sweet Sprinkles
+                <span className="font-heading text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-400 dark:to-pink-200 tracking-wide text-center sm:text-left">
+                  Sweet Cafe
                 </span>
               </div>
             </a>
@@ -98,7 +98,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-pink-200/50 dark:border-dark-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm font-medium text-pink-500 dark:text-pink-400/60 flex items-center gap-1.5">
-            &copy; {new Date().getFullYear()} Sweet Sprinkles. Made with{" "}
+            &copy; {new Date().getFullYear()} Sweet Cafe. Made with{" "}
             <IoHeartSharp className="text-pink-500 inline text-base" /> and lots of sugar.
           </p>
           <div className="flex flex-wrap justify-center gap-8 text-sm font-semibold text-pink-600/70 dark:text-pink-400/60 bg-white/60 dark:bg-dark-900/50 px-6 py-2.5 rounded-full shadow-sm shadow-pink-100/30">

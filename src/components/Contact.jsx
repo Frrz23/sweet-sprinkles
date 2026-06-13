@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: <IoMailOutline className="text-2xl" />,
     title: "Email Us",
-    lines: ["hello@sweetsprinkles.com", "Orders & catering inquiries"],
+    lines: ["hello@sweetcafe.com", "Orders & catering inquiries"],
   },
   {
     icon: <IoTimeOutline className="text-2xl" />,

@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoSunnyOutline, IoMoonOutline, IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import {
+  IoSunnyOutline,
+  IoMoonOutline,
+  IoMenuOutline,
+  IoCloseOutline,
+} from "react-icons/io5";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -28,16 +33,19 @@ export default function Navbar({ dark, setDark }) {
           : "py-5 bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between" aria-label="Main navigation">
+      <nav
+        className="max-w-7xl mx-auto px-6 flex items-center justify-between"
+        aria-label="Main navigation"
+      >
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 group">
-          <img 
-            src={`${import.meta.env.BASE_URL}images/Logo.png`} 
-            alt="Logo" 
-            className="h-10 w-auto object-contain drop-shadow-sm" 
+          <a href="#home" className="flex items-center gap-0.5 group ml-2">
+          <img
+            src={`${import.meta.env.BASE_URL}images/logo2.png`}
+            alt="Logo"
+            className="h-15 w-auto object-contain drop-shadow-sm"
           />
-          <span className="font-heading text-xl font-bold text-pink-700 dark:text-pink-300 group-hover:text-pink-500 transition-colors">
-            Sweet Sprinkles
+          <span className="font-heading text-2xl font-bold text-pink-700 dark:text-pink-300 group-hover:text-pink-500 transition-colors">
+            Sweet Cafe
           </span>
         </a>
 
@@ -86,7 +94,11 @@ export default function Navbar({ dark, setDark }) {
             aria-label="Toggle menu"
             id="mobile-menu-toggle"
           >
-            {mobileOpen ? <IoCloseOutline className="text-2xl" /> : <IoMenuOutline className="text-2xl" />}
+            {mobileOpen ? (
+              <IoCloseOutline className="text-2xl" />
+            ) : (
+              <IoMenuOutline className="text-2xl" />
+            )}
           </button>
         </div>
       </nav>

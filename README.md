@@ -1,6 +1,6 @@
-# 🧁 Sweet Sprinkles — Bakery & Cafe
+# 🧁 Sweet Cafe — Bakery & Cafe
 
-A beautiful, pink-themed landing page for **Sweet Sprinkles Bakery & Cafe**, built with modern web technologies.
+A beautiful, pink-themed landing page for **Sweet Cafe Bakery & Cafe**, built with modern web technologies.
 
 ## ✨ Features
 

@@ -6,7 +6,7 @@ const reviews = [
   {
     name: "Emily Rodriguez",
     role: "Wedding Client",
-    text: "Sweet Sprinkles made our wedding cake an absolute masterpiece. Not only was it stunning to look at, but every guest raved about the flavor. The lavender honey tier was heavenly!",
+    text: "Sweet Cafe made our wedding cake an absolute masterpiece. Not only was it stunning to look at, but every guest raved about the flavor. The lavender honey tier was heavenly!",
     rating: 5,
     avatar: "🤵‍♀️",
   },
