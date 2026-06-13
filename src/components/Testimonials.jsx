@@ -4,39 +4,39 @@ import { IoStarSharp, IoChevronBackOutline, IoChevronForwardOutline } from "reac
 
 const reviews = [
   {
-    name: "Emily Rodriguez",
-    role: "Wedding Client",
-    text: "Sweet Cafe made our wedding cake an absolute masterpiece. Not only was it stunning to look at, but every guest raved about the flavor. The lavender honey tier was heavenly!",
+    name: "Olivia Grant",
+    role: "Regular since 2020",
+    text: "Best cafe in the city, hands down. The almond croissants are unreal — crispy outside, soft inside. I stop by every morning before work and the staff always remembers my name.",
     rating: 5,
-    avatar: "🤵‍♀️",
+    avatar: "👩‍💼",
   },
   {
-    name: "James Chen",
-    role: "Regular Customer",
-    text: "I come here every Saturday morning for their almond croissants and a matcha latte. It's the perfect start to my weekend. The staff remembers my order — that's how you know it's special.",
+    name: "Marcus Lee",
+    role: "Birthday Order",
+    text: "Ordered a custom birthday cake and it exceeded every expectation. The design was gorgeous and the flavor was incredible. My whole family was impressed.",
     rating: 5,
-    avatar: "👨‍💼",
+    avatar: "👨‍🍳",
   },
   {
-    name: "Sofia Martinez",
-    role: "Birthday Celebration",
-    text: "Ordered a custom birthday cake for my daughter's 5th birthday. The unicorn design was incredible and the red velvet flavor was the best I've ever had. She still talks about it!",
+    name: "Aisha Patel",
+    role: "Weekend Visitor",
+    text: "The honey lavender latte is my go-to. Such a cozy atmosphere — I bring my laptop here every Saturday. The pastries pair perfectly with their coffee.",
     rating: 5,
-    avatar: "👩",
+    avatar: "👩‍🎨",
   },
   {
-    name: "Alex Thompson",
-    role: "Corporate Event",
-    text: "We've been ordering cupcake towers for our office events for two years now. Always professional, always delicious, and the variety is unmatched. The team absolutely loves them.",
+    name: "Daniel Foster",
+    role: "Corporate Events",
+    text: "We order catering from Sweet Cafe for all our office events. Consistent quality, great presentation, and the team is always professional. Highly recommend.",
     rating: 5,
     avatar: "🧑‍💻",
   },
   {
-    name: "Priya Patel",
-    role: "Cafe Regular",
-    text: "The coziest cafe in town! Their rose velvet cupcakes are otherworldly. I've tried to find better — trust me, it doesn't exist. The pink decor is just the cherry on top.",
+    name: "Nina Kowalski",
+    role: "Wedding Client",
+    text: "Our wedding dessert table was a dream. The mini tarts, the cake, the macarons — every single item was perfect. Our guests are still raving about it months later.",
     rating: 5,
-    avatar: "👩‍🎨",
+    avatar: "👰",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Testimonials() {
     if (!isAutoplay) return;
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % reviews.length);
-    }, 5000);
+    }, 5500);
     return () => clearInterval(timer);
   }, [isAutoplay]);
 
@@ -67,39 +67,36 @@ export default function Testimonials() {
     <section
       id="testimonials"
       ref={ref}
-      className="py-24 bg-cream-50 dark:bg-dark-900 relative overflow-hidden"
-      aria-label="Customer testimonials"
+      className="py-28 bg-cream-50 dark:bg-chocolate-900 relative overflow-hidden"
     >
-      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-pink-200/20 dark:bg-pink-800/10 blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-grape-200/15 dark:bg-grape-900/10 blur-[80px]" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-coral-200/15 dark:bg-coral-900/10 blur-[80px]" />
 
       <div className="max-w-5xl mx-auto px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-pink-500 dark:text-pink-400 font-semibold text-sm tracking-widest uppercase mb-3">
-            Testimonials
+          <p className="text-grape-500 dark:text-grape-400 font-bold text-sm tracking-widest uppercase mb-4">
+            What People Say
           </p>
-          <h2 className="font-heading text-4xl sm:text-5xl font-bold text-pink-900 dark:text-pink-100 mb-4">
-            Sweet Words from
+          <h2 className="font-heading text-4xl sm:text-5xl font-semibold text-chocolate-800 dark:text-cream-100 mb-5">
+            Words That
             <br />
-            <span className="text-gradient-pink">Sweet People</span>
+            <span className="text-gradient-berry">Warm Our Hearts</span>
           </h2>
         </motion.div>
 
-        {/* Review Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2 }}
           className="relative"
         >
-          <div className="glass-card rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto relative">
-            {/* Big quote mark */}
-            <span className="absolute top-4 left-8 text-6xl text-pink-300/30 dark:text-pink-700/30 font-heading leading-none">
+          <div className="glass-card rounded-[2rem] p-8 sm:p-12 text-center max-w-3xl mx-auto relative">
+            <span className="absolute top-5 left-8 text-7xl text-strawberry-200/40 dark:text-grape-700/30 font-heading leading-none select-none">
               &ldquo;
             </span>
 
@@ -110,24 +107,23 @@ export default function Testimonials() {
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.5 }}
             >
-              {/* Stars */}
-              <div className="flex justify-center gap-1 mb-6">
+              <div className="flex justify-center gap-1.5 mb-6">
                 {Array.from({ length: reviews[current].rating }).map((_, i) => (
-                  <IoStarSharp key={i} className="text-yellow-400 text-xl" />
+                  <IoStarSharp key={i} className="text-lemon-400 text-lg" />
                 ))}
               </div>
 
-              <p className="text-lg sm:text-xl text-pink-800/80 dark:text-pink-200/80 leading-relaxed mb-8 italic font-body">
+              <p className="text-lg sm:text-xl text-chocolate-700/75 dark:text-cream-200/75 leading-relaxed mb-8 italic font-medium">
                 &ldquo;{reviews[current].text}&rdquo;
               </p>
 
-              <div className="flex items-center justify-center gap-3">
+              <div className="flex items-center justify-center gap-4">
                 <span className="text-3xl">{reviews[current].avatar}</span>
                 <div className="text-left">
-                  <p className="font-bold text-pink-900 dark:text-pink-100">
+                  <p className="font-bold text-chocolate-800 dark:text-cream-100">
                     {reviews[current].name}
                   </p>
-                  <p className="text-sm text-pink-600/60 dark:text-pink-300/60">
+                  <p className="text-sm text-chocolate-700/50 dark:text-cream-200/50 font-semibold">
                     {reviews[current].role}
                   </p>
                 </div>
@@ -135,12 +131,11 @@ export default function Testimonials() {
             </motion.div>
           </div>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex items-center justify-center gap-5 mt-10">
             <button
               onClick={prev}
-              className="p-2.5 rounded-full bg-pink-100 dark:bg-pink-900/40 hover:bg-pink-200 dark:hover:bg-pink-800/60 transition-colors text-pink-600 dark:text-pink-300"
-              aria-label="Previous testimonial"
+              className="p-3 rounded-xl bg-strawberry-100/60 dark:bg-grape-900/30 hover:bg-strawberry-200/80 dark:hover:bg-grape-800/40 transition-colors text-chocolate-700 dark:text-cream-200"
+              aria-label="Previous review"
             >
               <IoChevronBackOutline className="text-lg" />
             </button>
@@ -153,10 +148,10 @@ export default function Testimonials() {
                     setCurrent(i);
                     setIsAutoplay(false);
                   }}
-                  className={`h-2 rounded-full transition-all duration-300 ${
+                  className={`h-2 rounded-full transition-all duration-400 ${
                     i === current
-                      ? "w-8 bg-pink-500"
-                      : "w-2 bg-pink-300 dark:bg-pink-700 hover:bg-pink-400"
+                      ? "w-8 bg-strawberry-500 dark:bg-strawberry-400"
+                      : "w-2 bg-strawberry-200 dark:bg-grape-700 hover:bg-strawberry-300"
                   }`}
                   aria-label={`Go to review ${i + 1}`}
                 />
@@ -165,8 +160,8 @@ export default function Testimonials() {
 
             <button
               onClick={next}
-              className="p-2.5 rounded-full bg-pink-100 dark:bg-pink-900/40 hover:bg-pink-200 dark:hover:bg-pink-800/60 transition-colors text-pink-600 dark:text-pink-300"
-              aria-label="Next testimonial"
+              className="p-3 rounded-xl bg-strawberry-100/60 dark:bg-grape-900/30 hover:bg-strawberry-200/80 dark:hover:bg-grape-800/40 transition-colors text-chocolate-700 dark:text-cream-200"
+              aria-label="Next review"
             >
               <IoChevronForwardOutline className="text-lg" />
             </button>

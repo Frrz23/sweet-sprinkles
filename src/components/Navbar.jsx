@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  IoSunnyOutline,
-  IoMoonOutline,
-  IoMenuOutline,
-  IoCloseOutline,
-} from "react-icons/io5";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { BsSun, BsMoon } from "react-icons/bs";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -27,35 +23,30 @@ export default function Navbar({ dark, setDark }) {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "py-3 bg-white/80 dark:bg-dark-900/80 backdrop-blur-lg shadow-lg shadow-pink-200/20 dark:shadow-pink-900/10"
+          ? "py-3 bg-cream-50/90 dark:bg-chocolate-900/90 backdrop-blur-xl shadow-lg shadow-strawberry-200/30 dark:shadow-chocolate-800/30 border-b border-strawberry-200/30 dark:border-grape-900/20"
           : "py-5 bg-transparent"
       }`}
     >
-      <nav
-        className="max-w-7xl mx-auto px-6 flex items-center justify-between"
-        aria-label="Main navigation"
-      >
-        {/* Logo */}
-          <a href="#home" className="flex items-center gap-0.5 group ml-2">
+      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <a href="#home" className="flex items-center gap-3 group">
           <img
             src={`${import.meta.env.BASE_URL}images/logo2.png`}
-            alt="Logo"
-            className="h-15 w-auto object-contain drop-shadow-sm"
+            alt="Sweet Cafe"
+            className="h-[3.5rem] w-auto object-contain"
           />
-          <span className="font-heading text-2xl font-bold text-pink-700 dark:text-pink-300 group-hover:text-pink-500 transition-colors">
+          <span className="font-heading text-2xl font-semibold text-chocolate-800 dark:text-cream-100 group-hover:text-strawberry-500 dark:hover:text-strawberry-400 transition-colors">
             Sweet Cafe
           </span>
         </a>
 
-        {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-body text-sm font-semibold tracking-wide text-pink-800/70 dark:text-pink-200/70 hover:text-pink-600 dark:hover:text-pink-400 transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-pink-500 after:transition-all hover:after:w-full"
+                className="px-4 py-2 rounded-lg text-sm font-semibold text-chocolate-700/70 dark:text-cream-200/70 hover:text-strawberry-600 dark:hover:text-strawberry-400 hover:bg-strawberry-100/50 dark:hover:bg-grape-900/20 transition-all"
               >
                 {link.label}
               </a>
@@ -63,62 +54,47 @@ export default function Navbar({ dark, setDark }) {
           ))}
         </ul>
 
-        {/* Actions */}
-        <div className="flex items-center gap-3">
-          {/* Dark mode toggle */}
+        <div className="flex items-center gap-2">
           <button
             onClick={() => setDark(!dark)}
-            className="p-2 rounded-full bg-pink-100 dark:bg-pink-900/40 hover:bg-pink-200 dark:hover:bg-pink-800/60 transition-colors"
+            className="p-2.5 rounded-xl bg-white dark:bg-chocolate-800 hover:bg-strawberry-50 dark:hover:bg-chocolate-700 transition-colors text-chocolate-700 dark:text-cream-200 border border-strawberry-200/60 dark:border-chocolate-700/50 shadow-sm"
             aria-label="Toggle dark mode"
-            id="dark-mode-toggle"
           >
-            {dark ? (
-              <IoSunnyOutline className="text-yellow-400 text-lg" />
-            ) : (
-              <IoMoonOutline className="text-pink-600 text-lg" />
-            )}
+            {dark ? <BsSun className="text-base" /> : <BsMoon className="text-base" />}
           </button>
 
-          {/* Order CTA */}
           <a
             href="#contact"
-            className="hidden sm:inline-flex px-5 py-2 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold text-sm hover:from-pink-600 hover:to-pink-700 transition-all shadow-md shadow-pink-300/40 hover:shadow-lg hover:shadow-pink-400/40 hover:-translate-y-0.5"
+            className="hidden sm:inline-flex px-5 py-2.5 rounded-xl bg-strawberry-500 dark:bg-strawberry-600 text-white font-bold text-sm hover:bg-strawberry-600 dark:hover:bg-strawberry-700 transition-all shadow-md shadow-strawberry-300/40 hover:shadow-lg hover:-translate-y-0.5"
           >
             Order Now
           </a>
 
-          {/* Mobile menu toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg text-pink-700 dark:text-pink-300"
+            className="lg:hidden p-2.5 rounded-xl text-chocolate-700 dark:text-cream-200 hover:bg-strawberry-100/60 dark:hover:bg-grape-900/30 transition-colors"
             aria-label="Toggle menu"
-            id="mobile-menu-toggle"
           >
-            {mobileOpen ? (
-              <IoCloseOutline className="text-2xl" />
-            ) : (
-              <IoMenuOutline className="text-2xl" />
-            )}
+            {mobileOpen ? <HiX className="text-xl" /> : <HiMenuAlt3 className="text-xl" />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden bg-white/95 dark:bg-dark-900/95 backdrop-blur-xl border-t border-pink-200/30 dark:border-pink-800/30"
+            className="lg:hidden overflow-hidden bg-cream-50/95 dark:bg-chocolate-900/95 backdrop-blur-xl border-t border-strawberry-200/30 dark:border-grape-900/20"
           >
-            <ul className="flex flex-col items-center gap-4 py-6">
+            <ul className="flex flex-col items-center gap-2 py-6">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-body text-base font-semibold text-pink-800 dark:text-pink-200 hover:text-pink-600 transition-colors"
+                    className="block px-6 py-3 rounded-xl text-base font-semibold text-chocolate-800 dark:text-cream-200 hover:bg-strawberry-100/60 dark:hover:bg-grape-900/20 transition-all"
                   >
                     {link.label}
                   </a>
@@ -128,7 +104,7 @@ export default function Navbar({ dark, setDark }) {
                 <a
                   href="#contact"
                   onClick={() => setMobileOpen(false)}
-                  className="px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold text-sm"
+                  className="px-8 py-3 rounded-xl bg-strawberry-500 dark:bg-strawberry-600 text-white font-bold text-sm"
                 >
                   Order Now
                 </a>

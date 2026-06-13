@@ -16,47 +16,43 @@ const footerLinks = [
     ],
   },
   {
-    title: "Treats",
+    title: "Favorites",
     links: [
-      { label: "Cupcakes", href: "#menu" },
-      { label: "Custom Cakes", href: "#menu" },
       { label: "Pastries", href: "#menu" },
-      { label: "Cafe Drinks", href: "#menu" },
+      { label: "Custom Cakes", href: "#menu" },
+      { label: "Coffee", href: "#menu" },
+      { label: "Specials", href: "#menu" },
     ],
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-cream-50 dark:bg-dark-900 text-pink-800/80 dark:text-pink-200/80 pt-24 pb-8 border-t border-pink-100/50 dark:border-dark-800 relative overflow-hidden" aria-label="Footer">
-      
-      {/* Subtle background blobs for depth */}
-      <div className="absolute -left-40 bottom-0 w-96 h-96 rounded-full bg-pink-100/40 dark:bg-pink-900/10 blur-3xl" />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-pink-50/60 dark:bg-pink-900/5 blur-3xl pointer-events-none" />
+    <footer className="bg-cream-100 dark:bg-chocolate-900 text-chocolate-700/80 dark:text-cream-200/80 pt-24 pb-8 relative overflow-hidden border-t border-strawberry-200/30 dark:border-strawberry-900/20">
+      <div className="absolute -left-48 bottom-0 w-96 h-96 rounded-full bg-strawberry-200/15 dark:bg-strawberry-900/10 blur-[100px]" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-mint-200/10 dark:bg-mint-900/10 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center sm:text-left">
-          {/* Brand column */}
           <div className="lg:col-span-2 flex flex-col items-center sm:items-start">
             <a href="#home" className="inline-block mb-8 group">
               <div className="flex flex-col items-center sm:items-start gap-5">
-                <div className="relative group-hover:-translate-y-1.5 transition-transform duration-300">
-                  {/* Organic glowing blob behind the logo */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/60 dark:bg-pink-900/20 blur-xl rounded-full" />
-                  <img 
-                    src={`${import.meta.env.BASE_URL}images/logo2.png`} 
-                    alt="Logo" 
-                    className="relative h-28 w-auto object-contain drop-shadow-md" 
+                <div className="relative group-hover:-translate-y-1 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-white/50 dark:bg-cream-100/35 blur-[60px] rounded-full scale-[2]" />
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/logo2.png`}
+                    alt="Sweet Cafe"
+                    className="relative h-28 w-auto object-contain drop-shadow-lg dark:brightness-[3] dark:drop-shadow-[0_0_40px_rgba(255,255,255,0.8)]"
                   />
                 </div>
-                <span className="font-heading text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-400 dark:from-pink-400 dark:to-pink-200 tracking-wide text-center sm:text-left">
+                <span className="font-heading text-3xl font-semibold text-chocolate-800 dark:text-cream-100 tracking-wide">
                   Sweet Cafe
                 </span>
               </div>
             </a>
-            <p className="text-sm leading-relaxed mb-8 max-w-xs text-center sm:text-left text-pink-700/80 dark:text-pink-300/80 font-medium">
-              Handcrafted happiness in every bite. Your neighborhood bakery for the freshest
-              pastries, artisan cakes, and the warmest smiles in town.
+            <p className="text-sm leading-relaxed mb-8 max-w-xs text-center sm:text-left text-chocolate-700/60 dark:text-cream-200/60 font-medium">
+              Handmade pastries and specialty coffee in a warm, welcoming space.
+              Your go-to neighborhood cafe since 2019.
             </p>
             <div className="flex justify-center sm:justify-start gap-4">
               {socialLinks.map((social, i) => (
@@ -64,7 +60,7 @@ export default function Footer() {
                   key={i}
                   href={social.href}
                   aria-label={social.label}
-                  className="p-3.5 rounded-2xl bg-white dark:bg-dark-900 hover:bg-pink-50 dark:hover:bg-dark-800 text-pink-500 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-all hover:-translate-y-1 shadow-md shadow-pink-100/50 dark:shadow-black/20 border border-pink-50/50 dark:border-dark-800 text-xl"
+                  className="p-3.5 rounded-xl bg-white dark:bg-chocolate-800 hover:bg-strawberry-500 text-chocolate-700 dark:text-cream-200 hover:text-white transition-all hover:-translate-y-1 shadow-md text-xl border border-strawberry-200/40 dark:border-strawberry-800/30"
                 >
                   {social.icon}
                 </a>
@@ -72,20 +68,19 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
           {footerLinks.map((group, i) => (
             <div key={i} className="lg:pt-6 flex flex-col items-center sm:items-start">
-              <h3 className="font-heading text-lg font-bold text-pink-900 dark:text-white mb-6 text-center sm:text-left">
+              <h3 className="font-heading text-lg font-semibold text-chocolate-800 dark:text-cream-100 mb-6 text-center sm:text-left">
                 {group.title}
               </h3>
-              <ul className="space-y-4 flex flex-col items-center sm:items-start">
+              <ul className="space-y-3.5 flex flex-col items-center sm:items-start">
                 {group.links.map((link, j) => (
                   <li key={j}>
                     <a
                       href={link.href}
-                      className="text-sm font-semibold text-pink-700/70 dark:text-pink-300/70 hover:text-pink-500 dark:hover:text-pink-400 transition-colors flex items-center gap-2 group/link"
+                      className="text-sm text-chocolate-700/60 dark:text-cream-200/60 hover:text-strawberry-500 dark:hover:text-strawberry-400 transition-colors flex items-center gap-2 group/link font-semibold"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-pink-400 opacity-0 group-hover/link:opacity-100 transition-opacity hidden sm:block" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-strawberry-400 opacity-0 group-hover/link:opacity-100 transition-opacity hidden sm:block" />
                       {link.label}
                     </a>
                   </li>
@@ -95,16 +90,15 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-pink-200/50 dark:border-dark-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-sm font-medium text-pink-500 dark:text-pink-400/60 flex items-center gap-1.5">
+        <div className="border-t border-strawberry-200/40 dark:border-strawberry-900/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-sm text-chocolate-700/45 dark:text-cream-200/45 flex items-center gap-1.5 font-semibold">
             &copy; {new Date().getFullYear()} Sweet Cafe. Made with{" "}
-            <IoHeartSharp className="text-pink-500 inline text-base" /> and lots of sugar.
+            <IoHeartSharp className="text-strawberry-500 inline text-base" /> and sprinkles.
           </p>
-          <div className="flex flex-wrap justify-center gap-8 text-sm font-semibold text-pink-600/70 dark:text-pink-400/60 bg-white/60 dark:bg-dark-900/50 px-6 py-2.5 rounded-full shadow-sm shadow-pink-100/30">
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-300 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-pink-500 dark:hover:text-pink-300 transition-colors">Accessibility</a>
+          <div className="flex flex-wrap justify-center gap-8 text-sm text-chocolate-700/45 dark:text-cream-200/45 font-semibold">
+            <a href="#" className="hover:text-strawberry-500 dark:hover:text-strawberry-400 transition-colors">Privacy</a>
+            <a href="#" className="hover:text-strawberry-500 dark:hover:text-strawberry-400 transition-colors">Terms</a>
+            <a href="#" className="hover:text-strawberry-500 dark:hover:text-strawberry-400 transition-colors">Accessibility</a>
           </div>
         </div>
       </div>
