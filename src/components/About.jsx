@@ -73,7 +73,7 @@ export default function About() {
           </p>
           <p className="text-chocolate-700/80 dark:text-cream-200/80 leading-relaxed mb-10 font-medium">
             We work with local farmers, roast our own coffee, and frost every
-            cupcake by hand. No shortcuts, no preservatives — just honest food
+            cupcake by hand. No shortcuts, no preservatives, just honest food
             made with care.
           </p>
 

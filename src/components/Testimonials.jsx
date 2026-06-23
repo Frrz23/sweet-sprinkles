@@ -6,7 +6,7 @@ const reviews = [
   {
     name: "Olivia Grant",
     role: "Regular since 2020",
-    text: "Best cafe in the city, hands down. The almond croissants are unreal — crispy outside, soft inside. I stop by every morning before work and the staff always remembers my name.",
+    text: "Best cafe in the city, hands down. The almond croissants are unreal, crispy outside, soft inside. I stop by every morning before work and the staff always remembers my name.",
     rating: 5,
     avatar: "👩‍💼",
   },
@@ -20,7 +20,7 @@ const reviews = [
   {
     name: "Aisha Patel",
     role: "Weekend Visitor",
-    text: "The honey lavender latte is my go-to. Such a cozy atmosphere — I bring my laptop here every Saturday. The pastries pair perfectly with their coffee.",
+    text: "The honey lavender latte is my go-to. Such a cozy atmosphere, I bring my laptop here every Saturday. The pastries pair perfectly with their coffee.",
     rating: 5,
     avatar: "👩‍🎨",
   },
@@ -34,7 +34,7 @@ const reviews = [
   {
     name: "Nina Kowalski",
     role: "Wedding Client",
-    text: "Our wedding dessert table was a dream. The mini tarts, the cake, the macarons — every single item was perfect. Our guests are still raving about it months later.",
+    text: "Our wedding dessert table was a dream. The mini tarts, the cake, the macarons, every single item was perfect. Our guests are still raving about it months later.",
     rating: 5,
     avatar: "👰",
   },

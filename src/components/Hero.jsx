@@ -54,7 +54,7 @@ export default function Hero() {
               <span className="text-base">✨</span> Fresh & Baked Daily
             </span>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-grape-100 dark:bg-grape-900/30 text-grape-500 dark:text-grape-300 font-bold text-xs uppercase tracking-wider border border-grape-200/50 dark:border-grape-700/30">
-              <span className="text-base">☕</span> Open 7am — 7pm
+              <span className="text-base">☕</span> Open 7am to 7pm
             </span>
           </motion.div>
 

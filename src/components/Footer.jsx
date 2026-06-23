@@ -1,8 +1,9 @@
-import { IoLogoInstagram, IoLogoFacebook, IoHeartSharp } from "react-icons/io5";
+import { IoLogoInstagram, IoHeartSharp } from "react-icons/io5";
+import { FaTiktok } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: <IoLogoInstagram />, label: "Instagram", href: "https://www.instagram.com/sweet_sprinkles2023/" },
-  { icon: <IoLogoFacebook />, label: "Facebook", href: "https://www.facebook.com/p/Sweet-Sprinkles-100088856784279/" },
+  { icon: <IoLogoInstagram />, label: "Instagram", href: "https://www.instagram.com/siteedge12/" },
+  { icon: <FaTiktok />, label: "TikTok", href: "https://www.tiktok.com/@siteedge12?lang=en" },
 ];
 
 const footerLinks = [
@@ -28,7 +29,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-cream-100 dark:bg-chocolate-900 text-chocolate-700/80 dark:text-cream-200/80 pt-24 pb-8 relative overflow-hidden border-t border-strawberry-200/30 dark:border-strawberry-900/20">
+    <footer className="bg-cream-50 dark:bg-chocolate-900 text-chocolate-700/80 dark:text-cream-200/80 pt-24 pb-8 relative overflow-hidden border-t border-strawberry-200/30 dark:border-strawberry-900/20">
       <div className="absolute -left-48 bottom-0 w-96 h-96 rounded-full bg-strawberry-200/15 dark:bg-strawberry-900/10 blur-[100px]" />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-mint-200/10 dark:bg-mint-900/10 blur-[100px] pointer-events-none" />
 
@@ -88,6 +89,38 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Site-Edge Promo Section */}
+        <div className="mt-8 mb-10 glass-card rounded-3xl p-10 text-center relative overflow-hidden shadow-xl shadow-strawberry-200/20 dark:shadow-chocolate-800/30 border border-strawberry-200/20 dark:border-strawberry-800/15">
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-strawberry-200/15 dark:bg-strawberry-900/10 rounded-full blur-2xl" />
+          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-grape-200/15 dark:bg-grape-900/10 rounded-full blur-2xl" />
+          <div className="relative z-10">
+            <p className="text-sm font-bold uppercase tracking-widest mb-3 text-chocolate-700/50 dark:text-cream-200/50">
+              Website Designed & Developed By
+            </p>
+            <a
+              href="https://www.site-edge.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block group"
+            >
+              <span className="font-heading text-4xl sm:text-5xl font-bold tracking-wide group-hover:scale-105 transition-transform inline-block text-chocolate-800 dark:text-cream-100">
+                Site-Edge
+              </span>
+            </a>
+            <p className="mt-4 text-base max-w-lg mx-auto font-medium text-chocolate-700/70 dark:text-cream-200/70">
+              Need a stunning website for your business? We craft beautiful, high-performance websites that drive results.
+            </p>
+            <a
+              href="https://www.site-edge.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex px-8 py-3.5 rounded-full bg-strawberry-500 dark:bg-strawberry-600 text-white font-bold text-sm shadow-lg shadow-strawberry-300/40 hover:shadow-xl hover:shadow-strawberry-400/50 hover:-translate-y-0.5 transition-all"
+            >
+              Get Your Website Built →
+            </a>
+          </div>
         </div>
 
         <div className="border-t border-strawberry-200/40 dark:border-strawberry-900/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">

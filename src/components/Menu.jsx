@@ -116,7 +116,7 @@ export default function Menu() {
             Explore the <span className="text-gradient-candy">Menu</span>
           </h2>
           <p className="text-chocolate-700/70 dark:text-cream-200/70 max-w-xl mx-auto font-medium">
-            A curated selection of pastries, cakes, and coffee — each crafted
+            A curated selection of pastries, cakes, and coffee, each crafted
             to make your day a little sweeter.
           </p>
         </motion.div>
